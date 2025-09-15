@@ -13,7 +13,7 @@ void enterArrayData(double *arr){
     cout << "Data entry for the array:\n";
     for (int i = 0; i < SIZE; i++){
         cout << "   > Element #" << i << ": ";
-        cin >> arr[i];
+        cin >> *(arr + i); //pointer notation
     }
     cout << "Data entry complete." << endl;
 }
