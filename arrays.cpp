@@ -27,11 +27,20 @@ void outputArrayData(double *arr){
     cout << endl;
 }
 
+
+double sumArray(double *arr){
+    double sum = 0;
+    for (int i = 0; i < SIZE; i++)
+        sum += *(arr + i);
+    return sum;
+}
+
 int main(){
     double *dynArr = nullptr;
     dynArr = new double[SIZE];
     enterArrayData(dynArr);
     outputArrayData(dynArr);
+    cout << sumArray(dynArr) << endl;
     delete [] dynArr;
 }
 /*
